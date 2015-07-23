@@ -1,4 +1,3 @@
 <% @posts.each do |post| %>
-  <%= image_tag post.image.url(:medium) %>   
-  <%= post.caption %>
-<% end %>
+  <%= render 'post', post: post %>
+  <% end %>
