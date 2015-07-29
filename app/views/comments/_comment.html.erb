@@ -4,9 +4,17 @@
 <div class="comment-content">
   <%= comment.content %>
 </div>
+<div class="post-bottom">
+      <div class="supertitle">
+        <div class="supertitle-content">
+          <div class="user-name">
+          <%= post.user.user_name %>
+          </div>
+          <%= post.supertitle %>
+        </div>
 <% if comment.user == current_user %>
 <%= link_to post_comment_path(post, comment), method: :delete, data: { confirm: "Are you sure?" } do %>
-<span>(class="glyphicon glyphicon-remove delete-comment")</span>
+<span class="glyphicon glyphicon-remove delete-comment" </span>
 <% end %>
 <% end %>
 </div>

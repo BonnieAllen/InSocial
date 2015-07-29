@@ -17,6 +17,10 @@ gem 'pry-rails'
 gem 'devise'
 gem 'httparty'
 gem "figaro"
+gem 'instagram'
+gem 'will_paginate'
+gem 'twitter'
+gem 'dotenv-rails'
 
 gem 'slim-rails'
 

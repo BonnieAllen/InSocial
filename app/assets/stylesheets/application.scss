@@ -19,41 +19,41 @@
  body {  
   background-color: #fafafa;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
-}
+ }
 
-/* ## NAVBAR CUSTOMISATIONS ## */
+ /* ## NAVBAR CUSTOMISATIONS ## */
 
-.navbar-brand {
+ .navbar-brand {
   a {
     color: #000000;
   }
-}
+ }
 
-.navbar-default {
+ .navbar-default {
   background-color: #fff;
   height: 108px;
   .navbar-nav li a {
     color: #pink;
   }
-}
+ }
 
-.navbar-container {
+ .navbar-container {
   width: 620px;
   margin: 0 auto;
   margin-top: 35px;
   margin-bottom: 35px;
-}
+ }
 
-/* ## POST CUSTOMISATIONS ## */
+ /* ## POST CUSTOMISATIONS ## */
 
-.posts-wrapper {
+ .posts-wrapper {
   padding-top: 40px;
   margin: 0 auto;
   max-width: 642px;
   width: 100%;
-}
+ }
 
-.post {
+ .post {
   background-color: #fff;
   border-color: #edeeee;
   border-style: solid;
@@ -73,22 +73,22 @@
     line-height: 18px;
     .user-name, .time-ago {
       display: inline;
-    }
+  }
     .thumb-image {}
     .user-name {
       font-weight: 500;
-    }
+  }
     .time-ago {
       color: #A5A7AA;
       float: right;
     }
-  }
+    }
   .image {
     border-bottom: 1px solid #eeefef;
     border-top: 1px solid #eeefef;
   }
 
-.post-bottom {
+ .post-bottom {
   .user-name, .comment-content {
     display: inline;
   }
@@ -108,10 +108,10 @@
     display: inline;
   }
   .comment {
-    margin-bottom: 7px;
-    .user-name {
-      font-weight: 500;
-      margin-right: 0.3em;
+  margin-bottom: 7px;
+  .user-name {
+  font-weight: 500;
+  margin-right: 0.3em;
     }
     #comment_content {
       font-size: 15px;
@@ -132,9 +132,9 @@
   padding-bottom: 10px;
   font-size: 15px;
   line-height: 18px;
-}
+ }
 
-.comment-like-form {
+ .comment-like-form {
   padding-top: 24px;
   margin-top: 13px;
   margin-left: 24px;
@@ -144,20 +144,49 @@
   border-top: 1px solid #EEEFEF;
   flex-direction: row;
   justify-content: center;
-}
+ }
 
-/* ## Wrapper and styling for the new and edit views ## */
+ /* ## Wrapper and styling for the new and edit views ## */
 
-.form-wrapper {
+ .form-wrapper {
   width: 60%;
   margin: 20px auto;
   background-color: #fff;
   padding: 40px;
   border: 1px solid #eeefef;
   border-radius: 3px;
-}
+ }
 
-.edit-links {
+ .edit-links {
   margin-top: 20px;
   margin-bottom: 40px;
 }
+
+ /* ## Instagram tagged image container ## */
+
+ .tagged-images {
+
+  background-color: #fff;
+  border-color: #edeeee;
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  margin-bottom: 60px;
+  padding-top: 40px;
+  margin: 0 auto;
+  max-width: 642px;
+  width: 100%;
+  border-bottom: 1px solid #eeefef;
+  border-top: 1px solid #eeefef;
+  font-size: 15px;
+  line-height: 18px;
+  border: medium none;
+  width: 100%;
+  color: #4B4F54;
+ }
+
+
+
+
+  
+
