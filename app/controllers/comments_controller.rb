@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
   before_action :set_post
 
-  #  def index
-  #   @comments = Comment.all
-  # end
+   def index
+    @comments = Comment.all
+  end
 
   def create
     @comment = @post.comments.build(comment_params)
@@ -25,7 +25,6 @@ class CommentsController < ApplicationController
       flash[:success] = 'Your Comment Has Been deleted.'
       redirect_to root_path
     end
-
 
   end
 

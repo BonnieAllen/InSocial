@@ -21,6 +21,7 @@ gem 'instagram'
 gem 'will_paginate'
 gem 'twitter'
 gem 'dotenv-rails'
+gem 'jquery-fileupload-rails'
 
 gem 'slim-rails'
 

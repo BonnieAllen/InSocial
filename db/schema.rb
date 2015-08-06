@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150731142020) do
+ActiveRecord::Schema.define(version: 20150804024952) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,32 @@ ActiveRecord::Schema.define(version: 20150731142020) do
   end
 
   add_index "style_activities", ["user_id"], name: "index_style_activities_on_user_id", using: :btree
+
+  create_table "style_models", force: :cascade do |t|
+    t.string   "image_url"
+    t.integer  "image_file_size"
+    t.string   "purchase_url"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "tweets", force: :cascade do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tweets", ["user_id", "created_at"], name: "index_tweets_on_user_id_and_created_at", using: :btree
+
+  create_table "uploads", force: :cascade do |t|
+    t.string   "uploaded_file_file_name"
+    t.string   "uploaded_file_content_type"
+    t.integer  "uploaded_file_file_size"
+    t.datetime "uploaded_file_updated_at"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
