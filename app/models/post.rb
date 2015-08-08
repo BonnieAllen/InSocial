@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
   belongs_to :user 
   
-  # has_many :style_models
+  has_many :uploads
   # accepts_nested_attributes_for :style_models, :allow_destroy => true
 
 end

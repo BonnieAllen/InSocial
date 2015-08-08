@@ -1,13 +1,13 @@
 class StyleModelController < ApplicationController
   def new
-    @stylemodel = current_user.posts.build
+    @stylemodel = current_user.posts.new
   end
 
   def edit
   end
 
   # def create
-  #   @stylemodel = current_user.posts.build(post_params)
+  #   @stylemodel = current_user.posts.new(post_params)
 
   #   if @stylemodel.save
   #     flash[:success] = "Your style models have been created!"

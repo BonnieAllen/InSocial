@@ -11,11 +11,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = current_user.posts.build
+    @post = current_user.posts.new
   end
 
   def create
-    @post = current_user.posts.build(post_params)
+    @post = current_user.posts.new(post_params)
 
     if @post.save
       flash[:success] = "Your style post has been created!"
