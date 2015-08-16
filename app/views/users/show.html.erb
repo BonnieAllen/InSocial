@@ -6,13 +6,15 @@
         <%= gravatar_for @user %>
         <%= @user.user_name %>
       </h1>
+      <h2>Following: <%= @user.following.count %></h2>
+      <h2>Followers: <%= @user.followers.count %></h2>
     </section>
     <section class="stats">
     <!--   <%= render 'shared/stats' %> -->
     </section>
   </aside>
   <div class="col-md-8">
-    <%= render 'follow_form' %>
+    <%= render 'follow_form' unless current_user.id == @user.id  %>
     <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">
