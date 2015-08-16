@@ -15,12 +15,17 @@
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' unless current_user.id == @user.id  %>
-    <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
-      <ol class="microposts">
-        <%= render @microposts %>
-      </ol>
-      <%= will_paginate @microposts %>
+    <h3>Followers</h3>
+    <% if @user.followers.any? %>
+      <ul class="users follow">
+        <%= render @user.followers %>
+      </ul>
+    <% end %>
+    <h3>Following</h3>
+    <% if @user.following.any? %>
+      <ul class="users follow">
+        <%= render @user.following %>
+      </ul>
     <% end %>
   </div>
 </div>
