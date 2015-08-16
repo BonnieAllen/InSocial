@@ -16,24 +16,40 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+html, body {
+          font-family: 'Josefin', sans-serif
+}
+
  body {  
-  background-color: #fafafa;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+  background-color: #EEE;
+  font-family: 'Josefin Sans';
  }
+
+ .alert {
+  margin-bottom: 0px;
+}
 
  /* ## NAVBAR CUSTOMISATIONS ## */
 
+ .navbar {
+  margin-bottom: 0px;
+}
+
  .navbar-brand {
   a {
-    color: #000000;
+    color: #FFFFFF;
+    font-size: 34px;
+    min-width: 300px;
+    position: relative;
+    height: 100%;
   }
  }
 
  .navbar-default {
-  background-color: #fff;
+  background-color: #000000;
   height: 108px;
   .navbar-nav li a {
-    color: #pink;
+  color: #FFFFFF;
   }
  }
 
@@ -55,11 +71,11 @@
 
  .post {
   background-color: #fff;
-  border-color: #edeeee;
+  border-color: #000000;
   border-style: solid;
   border-radius: 3px;
   border-width: 0px;
-  margin-bottom: 60px;
+  margin-bottom: -1px;
   }
 
   .post-head {
@@ -68,7 +84,7 @@
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 24px;
-    color: #125688;
+    color: #000000;
     font-size: 15px;
     line-height: 18px;
     .user-name, .time-ago {
@@ -125,13 +141,7 @@
       color: #515151;
     }
   }
-  margin-bottom: 7px;
-  padding-top: 24px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 10px;
-  font-size: 15px;
-  line-height: 18px;
+
  }
 
  .comment-like-form {
@@ -173,5 +183,98 @@
   display: inline-block;
 }
 
+/* ## Wrapper and styling for the new, edit & devise views ## */
+
+.registration-bg {
+  padding-top: 4em;
+  height: 1150px;
+  background-image: image-url('silverfoxx.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login-bg {
+  padding-top: 4em;
+  height: 1170px;
+  width: 1170px;
+  background-image: image-url('grossi1.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border: none;
+}
+
+.panel {
+  border-radius: 8px;
+}
+
+.panel-heading{
+  h1 {
+    text-align: center;
+  }
+}
+
+#image-preview {
+  margin: 0px auto;
+}
+
+#post_image {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+#uploaded_file-preview {
+  margin: 0px auto;
+}
+
+#upload_uploaded_file {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+
+#paginator {
+  color: #4090DB;
+  height: 120px;
+  width: 120px;
+  margin: 60px auto 40px;
+  position: relative;
+  display: table;
+  border: 2px solid #4090DB;
+  border-radius: 50%;
+  :hover {
+    border: 1px solid #2D6DA8;
+    border-radius: 50%;
+  }
+}
+
+#load_more {
+  display: table-cell;
+  font-size: 12px;
+  padding: 0px 9px;
+  vertical-align: middle;
+  text-decoration: none;
+  a :hover {
+    color: #2D6DA8;
+  }
+}
+
+.comments {
+  .paginator {
+    margin: 0.5em;
+    .more-comments {
+      color: #A5A7AA;
+    }
+  }
+}
   
 

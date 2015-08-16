@@ -17,18 +17,19 @@ gem 'pry-rails'
 gem 'devise'
 gem 'httparty'
 gem "figaro"
-gem 'instagram'
 gem 'will_paginate'
-gem 'twitter'
 gem 'dotenv-rails'
 gem 'jquery-fileupload-rails'
-
+gem 'mini_magick'
+gem 'carrierwave'
 gem 'slim-rails'
-
 gem 'twitter-bootstrap-rails'
-
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'cancancan'
 
 group :development do
   gem 'better_errors'
@@ -36,10 +37,8 @@ group :development do
   gem 'did_you_mean'
   gem 'bullet'
   gem 'spring'
-  # gem 'capybara', '~> 2.4.4'
   gem 'rspec-rails', '~> 3.2.1'
   gem "factory_girl_rails", "~> 4.0"
-  # gem 'pg'
 end
 
 group :test do
@@ -52,11 +51,8 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'pg'
 end
 
-gem 'devise'
-gem 'omniauth'
-gem 'omniauth-github'
 
-gem 'cancancan'
 

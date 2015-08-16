@@ -1,0 +1,25 @@
+h1 Listing image_scaffolds
+
+table
+  thead
+    tr
+      th Title
+      th Description
+      th Image
+      th
+      th
+      th
+
+  tbody
+    - @image_scaffolds.each do |image_scaffold|
+      tr
+        td = image_scaffold.title
+        td = image_scaffold.description
+        td = image_scaffold.image
+        td = link_to 'Show', image_scaffold
+        td = link_to 'Edit', edit_image_scaffold_path(image_scaffold)
+        td = link_to 'Destroy', image_scaffold, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Image scaffold', new_image_scaffold_path

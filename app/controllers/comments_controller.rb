@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :set_post
+  before_action :set_comment
 
    def index
     @comments = Comment.all

@@ -1,7 +1,6 @@
 class UploadsController < ApplicationController
  before_action :set_upload, only: [:show, :edit, :update, :destroy]
 
-  # GET /uploads
   def index
     @uploads = Upload.all
   end
@@ -9,7 +8,6 @@ class UploadsController < ApplicationController
   def show
   end
 
-  # GET /uploads/new
   def new
     @upload = Upload.new
     @post = Post.find(params[:post_id])
@@ -18,7 +16,6 @@ class UploadsController < ApplicationController
   def edit
   end
 
-  # POST /uploads
   def create
    # puts params[:post_id]
    #Returns all uploads with a particular post_id
@@ -60,7 +57,6 @@ class UploadsController < ApplicationController
       @upload = Upload.find(params[:id])
     end
 
-    
     def upload_params
       params.require(:upload).permit(:uploaded_file, :image_url, :post_id)
     end

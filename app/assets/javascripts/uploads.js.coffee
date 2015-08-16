@@ -23,3 +23,5 @@ jQuery ->
         data.context.find('.bar').css('width', progress + '%')
     done: (e, data) ->
       $('.actions input[type="submit"]').off('click')
+
+

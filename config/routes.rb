@@ -1,16 +1,24 @@
 Rails.application.routes.draw do
 	
-  get 'style_model/new'
+  resources :image_scaffolds
+  # get 'style_model/new'
+  # get 'style_model/edit'
+  get 'following' => 'users#following'
+  get 'followers' => 'users#followers'
 
-  get 'style_model/edit'
 
-	devise_for :users, :controllers => { registrations: 'registrations' }  
-	resources :posts do
+	devise_for :users, :controllers => { registrations: 'registrations' }   
+	 resources :posts do
 		resources :comments
 		resources :uploads
 	end
 
-
-	root 'posts#index'
-	
+	  resources :users do
+               member do
+                    get :following, :followers
+                end
+            end
+            resources :relationships,        only: [:create, :destroy]
+         
+	root 'posts#index'	
 end
