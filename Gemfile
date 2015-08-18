@@ -30,6 +30,7 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'cancancan'
 gem 'therubyracer',  platforms: :ruby
+gem 'thin'
 
 group :development do
   gem 'better_errors'
