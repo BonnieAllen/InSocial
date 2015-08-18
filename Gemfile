@@ -11,7 +11,6 @@ gem 'haml', '~> 4.0.6'
 gem 'simple_form', '~> 3.1.0'
 gem 'paperclip', '~> 4.2'
 gem 'bootstrap-sass', '~> 3.3.3'
-gem 'pg'
 gem 'quiet_assets'
 gem 'pry-rails'
 gem 'devise'
@@ -26,10 +25,10 @@ gem 'slim-rails'
 gem 'twitter-bootstrap-rails'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
-gem 'devise'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'cancancan'
+gem 'therubyracer',  platforms: :ruby
 
 group :development do
   gem 'better_errors'
@@ -46,10 +45,10 @@ group :test do
   gem 'launchy'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
-  gem 'spring'
 end
 
 group :production do
+  gem 'unicorn'
   gem 'rails_12factor'
   gem 'pg'
 end
