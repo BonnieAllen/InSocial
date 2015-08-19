@@ -3,7 +3,7 @@ class StyleModel < ActiveRecord::Base
   validates :image_url, presence: true
   validates :purchase_url, presence: true
   validates :user_id, presence: true
-  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+  # validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
   belongs_to :post
 
   has_attached_file :attachment
