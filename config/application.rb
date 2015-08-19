@@ -21,9 +21,8 @@ module NSocial
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = 
-    
-    #On config/application.rb forcing your application to not access the DB or load models when precompiling your assets.
-    config.assets.initialize_on_precompile = false
+    config.active_record.raise_in_transactional_callbacks = true
+
+    config.serve_static_assets = true
   end
 end
