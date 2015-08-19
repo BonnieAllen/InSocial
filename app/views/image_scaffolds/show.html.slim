@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @image_scaffold.title
+p
+  strong Description:
+  = @image_scaffold.description
+p
+  strong Image:
+  = @image_scaffold.image
+
+= link_to 'Edit', edit_image_scaffold_path(@image_scaffold)
+'|
+= link_to 'Back', image_scaffolds_path

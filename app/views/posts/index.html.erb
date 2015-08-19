@@ -1,0 +1,30 @@
+<div class="posts-wrapper row">
+  <% @posts.reverse_each do |post| %>
+    <div class="post">
+      <div class="post-head">
+        <div class="name">
+          <%= post.user.user_name %>
+        </div>
+      </div>
+      <div class="image center-block">
+        <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
+        <div class="sm-img-container">
+        <% post.uploads.each do |upload| %>
+          <a href="<%=upload.purchase_url %>">
+          <%=image_tag upload.uploaded_file.url(:thumb),class:'sm-image' %>
+          </a>
+          <% end %>
+
+        <!-- #   <a href="http://www.newlook.com/shop/womens/jackets-and-coats/pink-waterfall-blazer_333681872"><img class="sm-image" src="http://ak2.polyvoreimg.com/cgi/img-thing/size/l/tid/134058139.jpg" /></a>
+        #   <a href="http://www.mytheresa.com/en-us/wool-and-silk-blend-bustier.html"><img class="sm-image" src="http://ak2.polyvoreimg.com/cgi/img-thing/size/l/tid/125902548.jpg" /></a>
+        #   <a href="http://www.net-a-porter.com/us/en/product/583326?cm_mmc=polyvore-desktop-_-cpc-_-pants-_-http://www.net-a-porter.com/us/en/product/583326"><img class="sm-image" src="http://ak1.polyvoreimg.com/cgi/img-thing/size/l/tid/144253592.jpg" /></a> 
+        #   <a href="http://www.mytheresa.com/en-us/jo-436142.html?utm_source=affiliate&utm_medium=polyvore.us"><img class="sm-image" src="http://ak1.polyvoreimg.com/cgi/img-thing/size/l/tid/139159388.jpg" /></a>
+         </div> 
+      </div>
+   <!--    <img class="supertitle">
+        <%= post.supertitle %>
+      </p> -->
+    </div>
+  <% end %>
+</div>
+
