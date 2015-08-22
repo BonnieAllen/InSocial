@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
 	
-  # devise_for :users
   resources :image_scaffolds
   get '/profile', to: 'users#profile'
-  # get 'style_model/new'
-  # get 'style_model/edit'
-  get 'following' => 'users#following'
-  get 'followers' => 'users#followers'
+  # get 'following' => 'users#following'
+  # get 'followers' => 'users#followers'
 
 
 	devise_for :users, :controllers => { registrations: 'registrations' }   
